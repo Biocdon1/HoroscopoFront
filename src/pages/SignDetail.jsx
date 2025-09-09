@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getSignByName } from '../services/signService';
+import { IMAGE_BASE_URL } from '../config'; // ✅ base para imágenes
 import '../styles/SignDetail.css';
-
-const BACKEND_BASE_URL = 'http://localhost:5000';
 
 const SignDetail = () => {
   const { signName } = useParams();
@@ -27,8 +26,8 @@ const SignDetail = () => {
   if (!signData) return <p>Signo no encontrado.</p>;
 
   const imageUrl = signData.accesoImagen
-    ? `${BACKEND_BASE_URL}${signData.imagen}`
-    : `/assets/signs/${signName}.svg`;
+    ? `${IMAGE_BASE_URL}${signData.imagen}` // ✅ imagen personalizada desde Render
+    : `/assets/signs/${signName}.svg`;      // ✅ fallback local
 
   return (
     <div className="sign-detail-container">
@@ -42,20 +41,20 @@ const SignDetail = () => {
 
       <p className="sign-detail-description">{signData.default}</p>
 
-   {signData.frases?.some(f => f.activo) ? (
-  <div className="sign-detail-frases">
-    <h3>Frases zodiacales:</h3>
-    <ul>
-      {signData.frases
-        .filter(f => f.activo)
-        .map((f, i) => (
-          <li key={i}>{f.texto}</li>
-        ))}
-    </ul>
-  </div>
-) : (
-  <p>No hay frases actualmente.</p>
-)}
+      {signData.frases?.some(f => f.activo) ? (
+        <div className="sign-detail-frases">
+          <h3>Frases zodiacales:</h3>
+          <ul>
+            {signData.frases
+              .filter(f => f.activo)
+              .map((f, i) => (
+                <li key={i}>{f.texto}</li>
+              ))}
+          </ul>
+        </div>
+      ) : (
+        <p>No hay frases actualmente.</p>
+      )}
 
       <button className="sign-detail-button" onClick={() => navigate(-1)}>
         Volver
