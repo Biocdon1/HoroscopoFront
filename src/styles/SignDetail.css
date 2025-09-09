@@ -1,0 +1,47 @@
+.sign-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(245, 197, 24, 0.3); /* dorado místico */
+}
+
+.sign-detail-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f5c518; /* dorado místico */
+  margin-bottom: 1rem;
+}
+
+.sign-detail-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.sign-detail-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.sign-detail-button {
+  background-color: #ff6f91; /* rosa astral */
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-detail-button:hover {
+  background-color: #f5c518; /* dorado místico */
+  color: #1e1e1e;
+}

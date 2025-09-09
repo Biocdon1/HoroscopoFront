@@ -1,0 +1,8 @@
+.layout-main {
+  min-height: calc(100vh - 4rem); /* ajusta según altura del footer */
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #3e3e3e; /* gris oscuro zodiacal */
+  color: #b0b0b0; /* texto gris suave */
+}

@@ -1,0 +1,56 @@
+:root {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #1e1e1e;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fondo y texto global */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1e1e1e;
+  color: rgba(20, 18, 18, 0.87);
+}
+
+/* Encabezados */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f5c518; /* dorado místico */
+}
+
+/* Enlaces */
+a {
+  font-weight: 500;
+  color: #4b0082; /* índigo zodiacal */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #9370db; /* lavanda cósmica */
+}
+
+/* Botones */
+button {
+  background-color: #ff6f91; /* rosa astral */
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+button:hover {
+  border-color: #f5c518;
+  background-color: #e85c80;
+}

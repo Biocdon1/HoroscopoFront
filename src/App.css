@@ -1,0 +1,66 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía global */
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: inherit; /* ← hereda de :root */
+  color: inherit;            /* ← hereda de :root */
+}
+
+/* Contenedor principal */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: inherit; /* ← hereda el fondo oscuro */
+  min-height: 100vh;         /* ← asegura que cubra toda la pantalla */
+}
+
+
+/* Enlaces */
+a {
+  color: #646cff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #4b5edc;
+}
+
+/* Botones */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  background-color: #646cff;
+  color: rgb(1, 1, 1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #4b5edc;
+}
+
+/* Tarjetas */
+.card {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Texto auxiliar */
+.read-the-docs {
+  color: #888;
+  font-size: 0.9rem;
+}
